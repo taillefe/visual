@@ -16,10 +16,11 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="64*"/>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="193*"/>
+                <ColumnDefinition Width="193*"/>
+                <ColumnDefinition Width="193*"/>
             </Grid.ColumnDefinitions>
         </Grid>
 
