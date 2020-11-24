@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -95,7 +97,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="imageninterrogacion.jpg" />
+    <Resource Include="res\image\imageninterrogacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\image\bart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\image\lisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\image\hommerjpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\image\marge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
