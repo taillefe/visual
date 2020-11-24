@@ -1,0 +1,27 @@
+﻿<Window x:Class="mahjong.HallOfFame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mahjong"
+        mc:Ignorable="d"
+        Title="HallOfFame" Height="450" Width="800">
+    
+    <DockPanel LastChildFill="True">
+       
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Bottom">
+            <Button Name ="btnResetear" Margin="5" Width="120" Click="btnResetear_Click">Resetear</Button>
+            <Button Name ="btnCancelar" Margin="5" Width="120" Click="btnCancelar_Click">Cancelar</Button>
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding listaJugadores}"  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Posicion" Binding="{Binding posicion}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tiempo" Binding="{ Binding tiempo}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </DockPanel>
+     
+</Window>

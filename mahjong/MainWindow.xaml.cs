@@ -22,10 +22,13 @@ namespace mahjong
     /// </summary>
     public partial class MainWindow : Window
     {
-        // ImageBrush ImageSource[,]  = new ImageBrush[4,4] { { "lisa.png", "lisa.png",  "bart.jpg","marge.png"}, { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},
-        //                                { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
+
+        //  string fuente  = new string[4,4] { { "lisa.png", "lisa.png",  "bart.jpg","marge.png"}, { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},
+        //                                 { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
         //ImageSource[1,1] = "lisa.png";
 
+        String[,] fuente = new String[2, 2] { { "lisa.png", "lisa.png" }, { "lisa.png", "lisa.png" } };
+        PictureBox.Load(fuente[1,1] );
         public MainWindow()
         {
             InitializeComponent();
@@ -41,13 +44,65 @@ namespace mahjong
 
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void mniConfigurar_Click(object sender, RoutedEventArgs e)
+        {
+            // llamar a la ventana configurar
+            // Displays the MessageBox.
+            MessageBoxResult result = MessageBox.Show("Tiempo de transicion", "Configuración", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Cancel)
+            {
+                // Closes the parent form.
+                this.Close();
+            }
+        }
+
+      
+        private void mniExportar_Click(object sender, RoutedEventArgs e)
+        {
+            //Llamar a la ventana FileDialog
+
+              
+                // Configure save file dialog box
+                Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog();
+                dlg.FileName = "Mahjong"; // Default file name
+                dlg.DefaultExt = ".txt"; // Default file extension
+                dlg.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
+
+                // Show save file dialog box
+                Nullable<bool> result = dlg.ShowDialog();
+
+                // Process save file dialog box results
+                if (result == true)
+                {
+                    // Save document
+                    string filename = dlg.FileName;
+                }
+               
+                //abrir fileDialog para lectura
+/*
+                // Configure open file dialog box
+                Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+                dlg.FileName = "Document"; // Default file name
+                dlg.DefaultExt = ".txt"; // Default file extension
+                dlg.Filter = "Text documents (.txt)|*.txt"; // Filter files by extension
+
+                // Show open file dialog box
+                Nullable<bool> result = dlg.ShowDialog();
+
+                // Process open file dialog box results
+                if (result == true)
+                {
+                    // Open document
+                    string filename = dlg.FileName;
+                }
+               ////////////////////////////////////////////
+  */   
+
+        }
+
+        private void mniSalir_Click(object sender, RoutedEventArgs e)
         {
             // llamar a la ventana MessageBox si/no advertencia
-
-            string message = "You did not enter a server name. Cancel this operation?";
-            string caption = "Error Detected in Input";
-
 
             // Displays the MessageBox.
             MessageBoxResult result = MessageBox.Show("¿Quieres cerrar la aplicacion?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Warning);
@@ -56,7 +111,13 @@ namespace mahjong
                 // Closes the parent form.
                 this.Close();
             }
+        }
 
+        private void mniHall_Click(object sender, RoutedEventArgs e)
+        {
+            // mostrar otra pantalla con una lista de datos
+            HallOfFame pantHaala = new HallOfFame();
+            pantHaala.ShowDialog();
         }
     }
 }

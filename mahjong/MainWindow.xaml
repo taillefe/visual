@@ -9,13 +9,13 @@
     <Grid>
         <Menu HorizontalAlignment="Left" >
             <MenuItem Header="Juego">
-                <MenuItem Header="Nuevo"></MenuItem>
-                <MenuItem Header="Configurar"></MenuItem>
-                <MenuItem Header="Salir"></MenuItem>
+                <MenuItem Name ="mniNuevo" Header="Nuevo"></MenuItem>
+                <MenuItem Name="mniConfigurar" Header="Configurar" Click="mniConfigurar_Click"></MenuItem>
+                <MenuItem Name ="mniSalir" Header="Salir" Click="mniSalir_Click"></MenuItem>
             </MenuItem>
             <MenuItem Header="Puntuaciones">
-                <MenuItem Header="Hall of Fame"></MenuItem>
-                <MenuItem Header="Salir" Click="MenuItem_Click"></MenuItem>
+                <MenuItem Name ="mniHall" Header="Hall of Fame" Click="mniHall_Click"></MenuItem>
+                <MenuItem Name ="mniExportar" Header="Exportar" Click="mniExportar_Click"></MenuItem>
             </MenuItem>
         </Menu>
         <Grid HorizontalAlignment="Left" Height="648" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="772" Name="grParejas">
@@ -32,7 +32,13 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Click="Button_Click">
+                <Image>
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="res/image/imageninterrogacion.jpg"/>
+                    </Image.OpacityMask>
+                </Image>
                 <Button.Background>
+
                     <ImageBrush ImageSource="res/image/imageninterrogacion.jpg"/>
                 </Button.Background>
             </Button>
