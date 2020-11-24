@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="718.741" Width="800">
     <Grid>
-        <Menu HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="772"/>
+        <Menu HorizontalAlignment="Left" Height="25" Margin="10,0,0,0" VerticalAlignment="Top" Width="772">
+            <MenuItem Header="Juego">
+                <MenuItem Header="Nuevo"></MenuItem>
+            </MenuItem>
+        </Menu>
         <Grid HorizontalAlignment="Left" Height="648" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="772">
             <Grid.RowDefinitions>
                 <RowDefinition/>
