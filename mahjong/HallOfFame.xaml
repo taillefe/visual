@@ -14,11 +14,11 @@
             <Button Name ="btnCancelar" Margin="5" Width="120" Click="btnCancelar_Click">Cancelar</Button>
         </StackPanel>
 
-        <DataGrid ItemsSource="{Binding listaJugadores}"  AutoGenerateColumns="False">
+        <DataGrid Name ="DataGridHallOfFame" ItemsSource="{Binding listaJugadores}" CanUserAddRows="False" CanUserDeleteRows="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="True" Header="Posicion" Binding="{Binding posicion}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Tiempo" Binding="{ Binding tiempo}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tiempo en completar " Binding="{ Binding tiempo}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
 

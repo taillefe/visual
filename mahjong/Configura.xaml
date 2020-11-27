@@ -1,0 +1,23 @@
+﻿<Window x:Class="mahjong.Configura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mahjong"
+        mc:Ignorable="d"
+        Title="Configuración" ResizeMode ="NoResize" Height="196.155" Width="397.802">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Height="130">
+            <Label Content="Tiempo de Transición"  Margin="50,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="129" Height="30"/>
+            <TextBox HorizontalAlignment="Left" Height="30" Margin="40,0,0,0"  Name ="txtTiempo" Text="Tiempo" Width="112"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment ="Bottom" HorizontalAlignment="Right" DockPanel.Dock="Bottom" Width="286">
+            <Button Name ="btnResetear" Margin="5" Width="120" Click="btnResetear_Click">Resetear</Button>
+            <Button Name ="btnCancelar" Margin="5" Width="120" Click="btnCancelar_Click">Cancelar</Button>
+        </StackPanel>
+
+
+
+    </StackPanel>
+</Window>

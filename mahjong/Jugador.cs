@@ -12,9 +12,10 @@ namespace mahjong
         public String nombre { get; set; }  // lectura y escritura
         public int tiempo { get; set; }
 
-        public void setPosicion(int posicion)
+        public void setPosicion(int posicion)              // no tengo el getPosicion para que solo sea de lectura
+                                                           //la posicion no se puede escribir  
         {
-          //  this.posicion = posicion;
+            //  this.posicion = posicion;  // para introducir los datos de la posicion se hace mediante .posicion en lugar del setPosicion 
         }
 
         public int getPosicion()

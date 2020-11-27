@@ -27,8 +27,8 @@ namespace mahjong
         //                                 { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
         //ImageSource[1,1] = "lisa.png";
 
-        String[,] fuente = new String[2, 2] { { "lisa.png", "lisa.png" }, { "lisa.png", "lisa.png" } };
-        PictureBox.Load(fuente[1,1] );
+      //  String[,] fuente = new String[2, 2] { { "lisa.png", "lisa.png" }, { "lisa.png", "lisa.png" } };
+       // PictureBox.Load(fuente[1,1] );
         public MainWindow()
         {
             InitializeComponent();
@@ -41,19 +41,23 @@ namespace mahjong
             int fila = Grid.GetRow(botonPulsado);
             //buscar en un array bidimensional de imágenes la fila y la columna que hemos pulsado
 
-
         }
 
         private void mniConfigurar_Click(object sender, RoutedEventArgs e)
         {
             // llamar a la ventana configurar
             // Displays the MessageBox.
-            MessageBoxResult result = MessageBox.Show("Tiempo de transicion", "Configuración", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-            if (result == MessageBoxResult.Cancel)
-            {
-                // Closes the parent form.
-                this.Close();
-            }
+            //   MessageBoxResult result = MessageBox.Show("Tiempo de transicion", "Configuración", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            //  if (result == MessageBoxResult.Cancel)
+            //  {
+            //      // Closes the parent form.
+            //      this.Close();
+            // }
+
+            // mostrar la pantalla configura
+            Configura pantConfigura = new Configura();
+            pantConfigura.ShowDialog();
+
         }
 
       
