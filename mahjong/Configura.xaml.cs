@@ -24,13 +24,15 @@ namespace mahjong
             InitializeComponent();
         }
 
-        private void btnResetear_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
+            // Closes the parent form.
+            this.Close();
+        }
+
+        private void btnAceptar_Click(object sender, RoutedEventArgs e)
+        {
+            // Closes the parent form.
             this.Close();
         }
     }

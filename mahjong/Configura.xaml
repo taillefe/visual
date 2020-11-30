@@ -5,19 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mahjong"
         mc:Ignorable="d"
-        Title="Configuración" ResizeMode ="NoResize" Height="196.155" Width="397.802">
-    <StackPanel>
+        Title="Configuración"  ResizeMode ="NoResize" Height="206.045" Width="414.286">
+    <StackPanel Margin="0,0,4,-6" Height="173" VerticalAlignment="Top">
         <StackPanel Orientation="Horizontal" Grid.Row="0" Height="130">
-            <Label Content="Tiempo de Transición"  Margin="50,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="129" Height="30"/>
-            <TextBox HorizontalAlignment="Left" Height="30" Margin="40,0,0,0"  Name ="txtTiempo" Text="Tiempo" Width="112"/>
+            <Label Content="Tiempo de Transición"  Margin="50,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="129" Height="25"/>
+            <TextBox HorizontalAlignment="Left" Height="25" Margin="40,0,0,0"  Name ="txtTiempo"  Width="112"/>
 
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment ="Bottom" HorizontalAlignment="Right" DockPanel.Dock="Bottom" Width="286">
-            <Button Name ="btnResetear" Margin="5" Width="120" Click="btnResetear_Click">Resetear</Button>
-            <Button Name ="btnCancelar" Margin="5" Width="120" Click="btnCancelar_Click">Cancelar</Button>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment ="Bottom" HorizontalAlignment="Right" DockPanel.Dock="Bottom" Width="286" Height="30">
+            <Button Name ="btnCancelar" Margin="5" Width="120"  Height="18" Click="btnCancelar_Click">Cancelar</Button>
+            <Button Name ="btnAceptar" Margin="5" Width="120"  Height="18" Click="btnAceptar_Click">Aceptar</Button>
         </StackPanel>
-
-
 
     </StackPanel>
 </Window>
