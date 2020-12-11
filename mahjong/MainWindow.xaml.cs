@@ -144,5 +144,20 @@ namespace mahjong
             boton.Background = _brush;
         }
 
+        private void Window(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // llamar a la ventana MessageBox si/no advertencia
+
+            // Displays the MessageBox.
+            MessageBoxResult result = MessageBox.Show("¿Quieres cerrar la aplicacion?", "Advertencia", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes)
+            {
+                // Closes the parent form.
+                e.Cancel = false;
+            }
+            else e.Cancel = true;
+
+
+        }
     }
 }
