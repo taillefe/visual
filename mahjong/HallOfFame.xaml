@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:mahjong"
         mc:Ignorable="d"
-        Title="HallOfFame" Height="450" Width="800">
+        Title="HallOfFame" Height="450" Width="800" ResizeMode="NoResize">
     
     <DockPanel LastChildFill="True">
        
