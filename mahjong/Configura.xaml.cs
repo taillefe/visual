@@ -26,13 +26,13 @@ namespace mahjong
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
-            // Closes the parent form.
+            //cierra la ventana
             this.Close();
         }
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
-            // Closes the parent form.
+            // cierra la ventana
             this.Close();
         }
     }

@@ -23,15 +23,12 @@ namespace mahjong
     public partial class MainWindow : Window
     {
 
-      //    String fuente  = new String[4,4] { { "lisa.png", "lisa.png",  "bart.jpg","marge.png"}, { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},
-      //                                   { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
-        //ImageSource[1,1] = "lisa.png";
+     // defino unos valores fijos de las imagenes para cada posicion 
 
-        String[,] fuente = new String[4, 4] { { "bart.png", "marge.png",  "bart.png","marge.png"}, { "marge.png", "marge.png",  "bart.png","marge.png"},
-                                         { "marge.png", "marge.png",  "bart.png","marge.png"},{ "marge.png", "marge.png",  "bart.png","marge.png"}};
+        String[,] fuente = new String[4, 4] { { "bart.png", "marge.png",  "moe.png","krusty.png"}, { "maggie.png", "homer.png",  "lisa.png","milhouse.png"},
+                                         { "marge.png", "maggie.png",  "bart.png","homer.png"},{ "moe.png", "krusty.png",  "lisa.png","milhouse.png"}};
      
-        
-        // PictureBox.Load(fuente[1,1] );
+     
         public MainWindow()
         {
             InitializeComponent();
@@ -50,7 +47,7 @@ namespace mahjong
 
         private void mniConfigurar_Click(object sender, RoutedEventArgs e)
         {
-            // llamar a la ventana configurar con messageBox
+            // esto sería llamar a la ventana configurar con messageBox
             // Displays the MessageBox 
             //   MessageBoxResult result = MessageBox.Show("Tiempo de transicion", "Configuración", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
             //  if (result == MessageBoxResult.Cancel)
@@ -87,7 +84,7 @@ namespace mahjong
                     string filename = dlg.FileName;
                 }
                
-                //abrir fileDialog para lectura
+                //esto sería para abrir fileDialog para lectura
 /*
                 // Configure open file dialog box
                 Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
@@ -131,7 +128,9 @@ namespace mahjong
 
         private void CambiarImagen(string imagen, Button boton)
         {
-            
+            // mandar la imagen pasada por parámetro al background del boton pulsado
+
+
             String directorioImagen = "../../" + imagen;
   
             Uri CURRENT_URI = new Uri(directorioImagen, UriKind.Relative);

@@ -27,6 +27,7 @@ namespace mahjong
             // aqui se indica cual es el data context
             // si this.DataContext =this;
             // los datos están en esta propia pantalla
+
             // si están en viewmodel hay  que hacer
             this.DataContext = new HallOfFameViewModel();  // se crea un contexto de tipo viewModel
 
