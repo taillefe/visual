@@ -23,12 +23,15 @@ namespace mahjong
     public partial class MainWindow : Window
     {
 
-        //  string fuente  = new string[4,4] { { "lisa.png", "lisa.png",  "bart.jpg","marge.png"}, { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},
-        //                                 { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
+      //    String fuente  = new String[4,4] { { "lisa.png", "lisa.png",  "bart.jpg","marge.png"}, { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},
+      //                                   { "lisa.png", "lisa.png",  "bart.jpg","marge.png"},{ "lisa.png", "lisa.png",  "bart.jpg","marge.png"}};
         //ImageSource[1,1] = "lisa.png";
 
-      //  String[,] fuente = new String[2, 2] { { "lisa.png", "lisa.png" }, { "lisa.png", "lisa.png" } };
-       // PictureBox.Load(fuente[1,1] );
+        String[,] fuente = new String[4, 4] { { "bart.png", "marge.png",  "bart.png","marge.png"}, { "marge.png", "marge.png",  "bart.png","marge.png"},
+                                         { "marge.png", "marge.png",  "bart.png","marge.png"},{ "marge.png", "marge.png",  "bart.png","marge.png"}};
+     
+        
+        // PictureBox.Load(fuente[1,1] );
         public MainWindow()
         {
             InitializeComponent();
@@ -40,13 +43,15 @@ namespace mahjong
             int columna = Grid.GetColumn(botonPulsado);
             int fila = Grid.GetRow(botonPulsado);
             //buscar en un array bidimensional de imágenes la fila y la columna que hemos pulsado
+            String imagen = fuente[columna, fila];          
+            CambiarImagen(imagen, botonPulsado);
 
         }
 
         private void mniConfigurar_Click(object sender, RoutedEventArgs e)
         {
-            // llamar a la ventana configurar
-            // Displays the MessageBox.
+            // llamar a la ventana configurar con messageBox
+            // Displays the MessageBox 
             //   MessageBoxResult result = MessageBox.Show("Tiempo de transicion", "Configuración", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
             //  if (result == MessageBoxResult.Cancel)
             //  {
@@ -123,5 +128,22 @@ namespace mahjong
             HallOfFame pantHaala = new HallOfFame();
             pantHaala.ShowDialog();
         }
+
+        private void CambiarImagen(string imagen, Button boton)
+        {
+            
+            String directorioImagen = "../../" + imagen;
+  
+            Uri CURRENT_URI = new Uri(directorioImagen, UriKind.Relative);
+
+       
+             BitmapImage _bitmap = new BitmapImage();
+            _bitmap.BeginInit();
+            _bitmap.UriSource = CURRENT_URI;
+            _bitmap.EndInit();
+            ImageBrush _brush = new ImageBrush(_bitmap);
+            boton.Background = _brush;
+        }
+
     }
 }

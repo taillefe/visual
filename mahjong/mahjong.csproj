@@ -157,5 +157,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="marge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
